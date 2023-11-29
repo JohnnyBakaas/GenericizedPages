@@ -20,6 +20,10 @@ const router = createBrowserRouter([
         path: "/Om oss",
         element: <div>Om oss</div>,
       },
+      {
+        path: "/Om deg",
+        element: <div>Om oss</div>,
+      },
     ],
   },
 ]);

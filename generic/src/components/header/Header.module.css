@@ -5,8 +5,9 @@
   margin: var(--spacer-width);
 }
 
+/* Logo stuff*/
 .logo {
-  height: 100px;
+  height: var(--header-height);
 }
 
 .logo-wrapper {
@@ -17,11 +18,13 @@
 }
 
 .nav-link-logo-wrapper {
-  height: 100px;
+  height: var(--header-height);
+  cursor: pointer;
 }
 
+/* Hamburger stuff*/
 .hamburger-wrapper {
-  height: 80px;
+  height: calc(var(--header-height) - 20px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -37,7 +40,47 @@
   background-color: var(--tertiary-color);
 }
 
+/* Nav stuff*/
+
+.nav-menue {
+  display: flex;
+  width: 100vw;
+  height: calc(100% - calc(var(--header-height) + var(--spacer-width)));
+  flex-direction: column;
+  position: absolute;
+  top: calc(var(--header-height) + var(--spacer-width));
+  left: 100vw;
+
+  transition: transform 0.4s linear;
+
+  background-color: var(--primary-color);
+}
+
+.nav-menue-show {
+  transform: translate(-100vw);
+}
+
 .nav-element {
+  width: calc(100% - calc(var(--spacer-width) * 2));
+  margin-left: var(--spacer-width);
+  border-top: 1px solid var(--secondary-color);
+  padding: var(--spacer-width) 0;
+  cursor: pointer;
+}
+
+.nav-element h1 {
+  text-align: right;
+  white-space: nowrap;
+  width: 100%;
+  transition: width 0.4s linear;
+}
+
+.nav-element:first-child {
+  margin-top: var(--spacer-width);
+}
+
+.nav-element:last-child {
+  border-bottom: 1px solid var(--secondary-color);
 }
 
 .nav-element-selected {

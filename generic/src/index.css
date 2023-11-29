@@ -16,6 +16,8 @@
   --tertiary-color: orange;
 
   --spacer-width: 10px;
+
+  --header-height: 100px;
 }
 
 a {
@@ -38,4 +40,12 @@ main {
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+}
+
+.active {
+  color: var(--tertiary-color);
+}
+
+.active h1 {
+  width: 0;
 }
