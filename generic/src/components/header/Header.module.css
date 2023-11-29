@@ -1,0 +1,45 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: calc(100% - calc(var(--spacer-width) * 2));
+  margin: var(--spacer-width);
+}
+
+.logo {
+  height: 100px;
+}
+
+.logo-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-link-logo-wrapper {
+  height: 100px;
+}
+
+.hamburger-wrapper {
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hamburger-bar {
+  height: 10px;
+  width: 90px;
+  background-color: var(--secondary-color);
+}
+
+.hamburger-wrapper:hover .hamburger-bar {
+  background-color: var(--tertiary-color);
+}
+
+.nav-element {
+}
+
+.nav-element-selected {
+  background-color: var(--tertiary-color);
+}

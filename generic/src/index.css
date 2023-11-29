@@ -1,0 +1,41 @@
+@import "https://fonts.googleapis.com/css?family=Open+Sans";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --primary-color: rgb(26, 26, 26);
+  --secondary-color: white;
+  --tertiary-color: orange;
+
+  --spacer-width: 10px;
+}
+
+a {
+  all: unset;
+}
+
+html {
+  font-family: "Open Sans", sans-serif;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+main {
+  margin: 0 var(--spacer-width);
+  background-color: red;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
