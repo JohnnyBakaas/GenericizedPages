@@ -14,7 +14,11 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <main>hjem</main>,
+        element: (
+          <main>
+            <button onClick={() => console.log("fff")}>fffff</button>
+          </main>
+        ),
       },
       {
         path: "/Om oss",

@@ -10,6 +10,7 @@ export type HeaderProps = {
 
 const Header = ({ pageName, logo, pages }: HeaderProps) => {
   const [showNav, setShowNav] = useState(false);
+  const [firstRender, setFirstRender] = useState(true);
   const location = useLocation();
 
   useEffect(() => {
@@ -31,8 +32,17 @@ const Header = ({ pageName, logo, pages }: HeaderProps) => {
           )}
         </NavLink>
         <div
-          className={styles["hamburger-wrapper"]}
-          onClick={() => setShowNav((pre) => !pre)}
+          className={
+            showNav
+              ? [styles["hamburger-wrapper"], styles["hamburger-close"]].join(
+                  " "
+                )
+              : styles["hamburger-wrapper"]
+          }
+          onClick={() => {
+            setFirstRender(false);
+            setShowNav((pre) => !pre);
+          }}
         >
           <div className={styles["hamburger-bar"]}></div>
           <div className={styles["hamburger-bar"]}></div>
@@ -41,14 +51,17 @@ const Header = ({ pageName, logo, pages }: HeaderProps) => {
       </div>
       <div
         className={
-          showNav
+          firstRender
+            ? [styles["nav-menue"], styles["nav-menue-first-render"]].join(" ")
+            : showNav
             ? [styles["nav-menue"], styles["nav-menue-show"]].join(" ")
             : styles["nav-menue"]
         }
+        onClick={() => setShowNav(false)}
       >
         {pages.map((e, i) => (
           <NavLink key={i} to={e.name} className={styles["nav-element"]}>
-            <h1>{e.name}</h1>
+            <h2>{e.name}</h2>
           </NavLink>
         ))}
       </div>
@@ -57,20 +70,3 @@ const Header = ({ pageName, logo, pages }: HeaderProps) => {
 };
 
 export default Header;
-
-const validateData = (data: string) => {
-  if (data.includes(".")) return false;
-  if (data.includes("a")) return false;
-  if (data.includes("z")) return false;
-  if (data.includes("x")) return false;
-  if (data.includes("nei")) return false;
-  return true;
-};
-
-const validateDataDry = (data: string) => {
-  const notAlowed = [".", "a", "z", "x", "nei"];
-  for (let i = 0; i < notAlowed.length; i++) {
-    if (data.includes(notAlowed[i])) return false;
-  }
-  return true;
-};

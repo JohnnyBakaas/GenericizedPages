@@ -46,6 +46,6 @@ h1 {
   color: var(--tertiary-color);
 }
 
-.active h1 {
-  width: 0;
+.active * {
+  width: 100%;
 }
