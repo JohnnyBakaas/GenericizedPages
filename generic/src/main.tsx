@@ -5,6 +5,8 @@ import "./index.css";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ErrorPage from "./components/errorPage/ErrorPage.tsx";
+import OmMeg from "./components/omMeg/OmMeg.tsx";
+import Hjem from "./components/hjem/Hjem.tsx";
 
 const router = createBrowserRouter([
   {
@@ -14,11 +16,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: (
-          <main>
-            <button onClick={() => console.log("fff")}>fffff</button>
-          </main>
-        ),
+        element: <Hjem />,
       },
       {
         path: "/Om oss",
@@ -26,7 +24,9 @@ const router = createBrowserRouter([
       },
       {
         path: "/Om deg",
-        element: <div>Om oss</div>,
+        element: (
+          <OmMeg navn="Johnny Bakaas" bilde="f" omMegTekst="kake baker saker" />
+        ),
       },
     ],
   },

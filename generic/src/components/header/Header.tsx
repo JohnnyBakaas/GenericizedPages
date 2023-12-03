@@ -18,7 +18,7 @@ const Header = ({ pageName, logo, pages }: HeaderProps) => {
   }, [location]);
 
   return (
-    <header className={styles.wrapper}>
+    <header className={styles["wrapper"]}>
       <div className={styles["logo-wrapper"]}>
         <NavLink to={"/"} className={styles["nav-link-logo-wrapper"]}>
           {logo ? (

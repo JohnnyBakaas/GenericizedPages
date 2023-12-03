@@ -1,10 +1,8 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import Header from "./components/header/Header";
 import { siteData } from "./siteData";
 import ScrollToTop from "./components/ScrollToTop";
 import { Outlet } from "react-router-dom";
+import Footer from "./components/footer/Footer";
 
 function App() {
   const data = siteData;
@@ -12,8 +10,19 @@ function App() {
   return (
     <>
       <ScrollToTop /> {/*hvis man vil ha det*/}
-      <Header pageName={data.pageName} logo={data.logo} pages={data.pages} />
+      <Header
+        pageName={data.header.pageName}
+        logo={data.header.logo}
+        pages={data.header.pages}
+      />
       <Outlet />
+      <Footer
+        sosialeMedier={data.footer.sosialeMedier}
+        adresse={data.footer.adresse}
+        adresseLink={data.footer.adresseLink}
+        tlf={data.footer.tlf}
+        epost={data.footer.epost}
+      />
     </>
   );
 }

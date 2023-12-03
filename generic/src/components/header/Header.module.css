@@ -2,7 +2,9 @@
   display: flex;
   flex-direction: column;
   width: calc(100% - calc(var(--spacer-width) * 2));
-  margin: var(--spacer-width);
+  padding: var(--spacer-width);
+  position: fixed;
+  background-color: var(--primary-color);
 }
 
 /* Logo stuff*/
@@ -62,7 +64,7 @@
 .nav-menue {
   display: flex;
   width: 100vw;
-  height: calc(100% - calc(var(--header-height) + var(--spacer-width)));
+  height: 100vh;
   flex-direction: column;
   position: absolute;
   align-items: center;

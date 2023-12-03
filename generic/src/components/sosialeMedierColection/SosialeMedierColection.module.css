@@ -1,0 +1,44 @@
+.wrapper * {
+  margin: 0 8px;
+}
+
+.wrapper * * {
+  margin: 0;
+}
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  fill: var(--primary-color);
+  margin: calc(var(--spacer-width) * 2) 0;
+}
+
+.snap-copy {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+
+  transform: translate(-100vw);
+  transition: opacity 0.4s, transform 0.5s;
+}
+
+.snap-copy * {
+  text-align: center;
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+  padding: var(--spacer-width);
+  border-radius: var(--spacer-width);
+}
+
+.snap-show {
+  opacity: 1;
+  transform: translate(0);
+}
+
+.snap-no-show {
+  opacity: 0;
+}
