@@ -18,6 +18,9 @@
   --spacer-width: 10px;
 
   --header-height: 100px;
+  --main-height: calc(
+    100vh - calc(var(--header-height) + calc(var(--spacer-width) * 3))
+  );
 }
 
 a {
@@ -34,10 +37,9 @@ html {
 
 main {
   margin: 0 var(--spacer-width);
-  min-height: calc(
-    100vh - calc(var(--header-height) + calc(var(--spacer-width) * 2))
-  );
+  min-height: var(--main-height);
   padding-top: calc(var(--header-height) + calc(var(--spacer-width) * 2));
+  margin-bottom: var(--spacer-width);
 }
 
 h1 {

@@ -1,0 +1,27 @@
+.hjem-img {
+  width: 100%;
+  height: var(--main-height);
+  object-fit: cover;
+}
+
+.hjem-img-wrapper {
+}
+
+.tekst-wrapper {
+  position: absolute;
+  width: calc(100% - calc(var(--spacer-width) * 2));
+  height: var(--main-height);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+}
+
+.tekst-container {
+  margin: calc(var(--spacer-width) * 2);
+  margin-bottom: calc(var(--spacer-width) * 10);
+  padding: var(--spacer-width);
+  color: var(--primary-color);
+  background-color: var(--tertiary-color);
+  border-radius: var(--spacer-width);
+}

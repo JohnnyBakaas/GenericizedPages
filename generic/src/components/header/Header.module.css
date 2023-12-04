@@ -5,6 +5,7 @@
   padding: var(--spacer-width);
   position: fixed;
   background-color: var(--primary-color);
+  z-index: 1000000000;
 }
 
 /* Logo stuff*/

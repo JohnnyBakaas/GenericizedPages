@@ -23,7 +23,7 @@ const router = createBrowserRouter([
         element: <div>Om oss</div>,
       },
       {
-        path: "/Om deg",
+        path: "/Om meg",
         element: (
           <OmMeg navn="Johnny Bakaas" bilde="f" omMegTekst="kake baker saker" />
         ),
